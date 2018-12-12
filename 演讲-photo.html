@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css相册</title>
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+ul {
+	list-style:none;
+}
+body {
+	background-color:black;
+	overflow:hidden;
+
+    /*喷sbad体,perspective: 设置元素被查看位置的视图：*/
+}
+.box {
+	width:316px;
+	height:387px;
+	border:5px solid gold;
+	margin:100px auto;
+	transition:all 2s;
+
+    /*transform-origin :设置旋转元素的基点位置23*/
+    /*第一个值 定义视图被置于 X 轴的何处: left center right length%*/
+    /*第二个值 定义视图被置于 Y 轴的何处: top center bottom length%*/
+}
+.box ul {
+	position:relative;
+	width:306px;
+	height:377px;
+	border:5px solid #E6E8FA;
+
+    /*transform-style:*/
+    /*值:flat	表示所有子元素在2D平面呈现。*/
+    /*值:preserve-3d	表示所有子元素在3D空间中呈现。*/
+	perspective:1000px;
+}
+.box	ul li {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	transition:all 1s;
+
+    /*transform-origin :设置旋转元素的基点位置12*/
+    /*第一个值 定义视图被置于 X 轴的何处: left center right length%*/
+    /*第二个值 定义视图被置于 Y 轴的何处: top center bottom length%*/
+	border:1px solid  gold;
+
+    /*塞成能够并排放置两个带边框的框*/
+    /*可通过将 box-sizing 设置为 "border-box"。这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。*/
+}
+.box ul li img {
+	width:100%;
+	height:100%;
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <img src="./cat6.jpg" alt="加载错误" >
+        </li>
+        <li>
+            <img src="./cat05.gif" alt="加载错误" >
+        </li>
+        <li>
+            <img src="./cat4.jpg" alt="加载错误" >
+        </li>
+        <li>
+            <img src="./cat3.jpg" alt="加载错误" >
+        </li>
+        <li>
+			<img src="./cat02.gif" alt="加载错误" >
+        </li>
+        <li>
+            <img src="./cat01.gif" alt="加载错误" >
+		</li>
+    </ul>
+</div>
+</body>
+</html>
